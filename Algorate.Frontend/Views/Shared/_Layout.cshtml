@@ -2,66 +2,193 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Algorate.Frontend</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>@ViewData["Title"] - Algorate</title>
 
     <environment include="Development">
+        <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.css" />
+        <link rel="stylesheet" href="~/lib/tether/dist/css/tether.css" />
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/lib/MDBootstrap/css/mdb.css" />
         <link rel="stylesheet" href="~/css/site.css" />
     </environment>
     <environment exclude="Development">
-        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+        <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="~/lib/tether/dist/css/tether.min.css" />
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.2/css/mdb.min.css" asp-append-version="true" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
+
+    <style rel="stylesheet">
+        main {
+            padding-top: 3rem;
+            padding-bottom: 2rem;
+        }
+
+        .extra-margins {
+            margin-top: 1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .navbar {
+            background-color: #3b3b3f;
+        }
+
+        footer.page-footer {
+            background-color: #3b3b3f;
+            margin-top: 2rem;
+        }
+    </style>
+
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+    <header>
+
+        <!--Navbar-->
+        <nav class="navbar navbar-toggleable-md navbar-dark">
+            <div class="container">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Algorate.Frontend</a>
+                <a class="navbar-brand" href="#">
+                    <strong>Navbar</strong>
+                </a>
+                <div class="collapse navbar-collapse" id="navbarNav1">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">Pricing</a>
+                        </li>
+                        <li class="nav-item dropdown btn-group">
+                            <a class="nav-link dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                            <div class="dropdown-menu dropdown" aria-labelledby="dropdownMenu1">
+                                <a class="dropdown-item">Action</a>
+                                <a class="dropdown-item">Another action</a>
+                                <a class="dropdown-item">Something else here</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <form class="form-inline waves-effect waves-light">
+                        <input class="form-control" type="text" placeholder="Search">
+                    </form>
+                </div>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+        </nav>
+        <!--/.Navbar-->
+
+    </header>
+
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; 2017 - Algorate.Frontend</p>
-        </footer>
     </div>
+        <!--Footer-->
+        <footer class="page-footer center-on-small-only">
+
+            <!--Footer Links-->
+            <div class="container">
+                <div class="row">
+
+                    <!--First column-->
+                    <div class="col-md-3 offset-lg-1 hidden-lg-down">
+                        <h5 class="title">ABOUT ALGORATE</h5>
+                        <p>Algorate is a web application for automatically grading algorithims submitted by students.</p>
+
+                        <p>Algorate reduces the time required for grading, while also giving feedback on class performance.</p>
+                    </div>
+                    <!--/.First column-->
+
+                    <hr class="hidden-md-up">
+
+                    <!--Second column-->
+                    <div class="col-lg-2 col-md-4 offset-lg-1">
+                        <h5 class="title">LEARN</h5>
+                        <ul>
+                            <li><a href="http://www.github.com/maranux/algorate.frontend/wiki">App Wiki</a></li>
+                            <li><a href="http://www.github.com/maranux/algorate.frontend">App Repository</a></li>
+                            <li><a href="http://www.github.com/maranux/algorate/wiki">API Wiki</a></li>
+                            <li><a href="http://www.github.com/maranux/algorate">API Repository</a></li>
+                        </ul>
+                    </div>
+                    <!--/.Second column-->
+
+                    <hr class="hidden-md-up">
+
+                    <!--Third column-->
+                    <div class="col-lg-2 col-md-4">
+                        <h5 class="title">USE</h5>
+                        <ul>
+                            <li><a href="#!">Link 1</a></li>
+                            <li><a href="#!">Link 2</a></li>
+                            <li><a href="#!">Link 3</a></li>
+                            <li><a href="#!">Link 4</a></li>
+                        </ul>
+                    </div>
+                    <!--/.Third column-->
+
+                    <hr class="hidden-md-up">
+
+                    <!--Fourth column-->
+                    <div class="col-lg-2 col-md-4">
+                        <h5 class="title">CONTACT</h5>
+                        <ul>
+                            <li><a href="#!">Link 1</a></li>
+                            <li><a href="#!">Link 2</a></li>
+                            <li><a href="#!">Link 3</a></li>
+                            <li><a href="#!">Link 4</a></li>
+                        </ul>
+                    </div>
+                    <!--/.Fourth column-->
+
+                </div>
+            </div>
+            <!--/.Footer Links-->
+
+            <hr>
+            <!--Copyright-->
+            <div class="footer-copyright">
+                <div class="container-fluid">
+                    Copyright © 2017: <a href="http://www.github.com/maranux"> Shea Rogers </a>
+
+                </div>
+            </div>
+            <!--/.Copyright-->
+
+        </footer>
+        <!--/.Footer-->
 
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/tether/dist/js/tether.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/lib/MDBootstrap/js/mdb.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
     </environment>
     <environment exclude="Development">
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.2.1.min.js"
                 asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
                 asp-fallback-test="window.jQuery"
                 crossorigin="anonymous"
                 integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
         </script>
+        <script src="~/lib/tether/dist/js/tether.min.js"></script>
         <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
                 asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
                 asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
                 crossorigin="anonymous"
                 integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.2/js/mdb.min.js"
+                asp-fallback-src="~/lib/MDBootstrap/js/mdb.min.js"
+                crossorigin="anonymous">
         </script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
