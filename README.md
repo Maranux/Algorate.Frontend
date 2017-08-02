@@ -1,2 +1,2 @@
-# Algorate.Backend
-The API for the Algorate project.
+# Algorate.Frontend
+The frontend for the Algorate application.
